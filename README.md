@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to simple url shortener!
 
-Things you may want to cover:
+This project is a challenge for chit chats recruiting process.
 
-* Ruby version
+The main view is for type a new short url, also in this view you can see all urls.
 
-* System dependencies
+If the url already exists, the app only redirects to its info.
 
-* Configuration
+When you see url's info, you can visit the url via click on shorted url
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app saves ip from visitor(at locally shows: ::1) and number of visits for each url too.

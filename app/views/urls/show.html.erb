@@ -2,4 +2,6 @@
 <h1>Info Url</h1>
 <p><strong>Full: </strong><%= link_to @url.full, @url.full, :target => "_blank" %></p>
 <p><strong>Short: </strong><%= link_to @url.shorted(request.base_url), @url.shorted(request.base_url), :target => "_blank" %></p>
+<p><strong>Share: </strong><%= mail_to "me@domain.com", 'Url', :subject => 'See this shorted url!', :body => @url.shorted(request.base_url) %></p>
 <p><strong>Visits: </strong><%= @url.visits.count %></p>
+<%= link_to 'Main', root_path %>

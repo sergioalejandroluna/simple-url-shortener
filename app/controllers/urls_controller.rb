@@ -26,7 +26,8 @@ class UrlsController < ApplicationController
     @existsUrl = Url.find_by(:full => params[:url][:full])
 
     if @existsUrl.present?
-      puts 'si existe'
+      #If url exists I redirect to its page then
+      redirect_to url_path(@existsUrl)
     else
       #save url
       @url = Url.new(url_params)

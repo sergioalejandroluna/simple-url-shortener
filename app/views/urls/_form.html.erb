@@ -11,9 +11,10 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :full %>
+    <%= form.label :full, "#{"Full url"}" %>
     <%= form.text_field :full, :required => true %>
   </div>
+  <br/>
   <div class="actions">
     <%= form.submit %>
   </div>

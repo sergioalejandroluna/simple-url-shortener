@@ -1,5 +1,19 @@
 <h1>New Url</h1>
 
 <%= render 'form', url: @url %>
-
-<%= link_to 'Back', urls_path %>
+<br/>
+<h2>All urls</h2>
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Visits</th>
+    <th>Info</th>
+  </tr>
+  <% $urls.each do |url| %>
+  <tr>
+    <td><%= url.shorted(request.base_url) %></td>
+    <td><%= url.visits.count %></td>
+    <td><%= link_to ' See info', url_path(url) %></td>
+  </tr>
+  <% end%>
+</table>
