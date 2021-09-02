@@ -4,4 +4,19 @@
 <p><strong>Short: </strong><%= link_to @url.shorted(request.base_url), @url.shorted(request.base_url), :target => "_blank" %></p>
 <p><strong>Share: </strong><%= mail_to "me@domain.com", 'Url', :subject => 'See this shorted url!', :body => @url.shorted(request.base_url) %></p>
 <p><strong>Visits: </strong><%= @url.visits.count %></p>
+<hr>
+<h2>Visitors</h2>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Ip</th>
+  </tr>
+  <% @url.visits.each do |visit| %>
+  <tr>
+    <td><%= visit.id %></td>
+    <td><%= visit.visitor.ip %></td>
+  </tr>
+  <% end%>
+</table>
+<hr>
 <%= link_to 'Main', root_path %>
