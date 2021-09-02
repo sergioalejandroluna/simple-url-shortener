@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.repository{
+  font-size: 30px;
+}
