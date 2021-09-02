@@ -17,7 +17,7 @@ class UrlsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create url" do
     assert_difference('Url.count') do
-      post urls_url, params: { url: {  } }
+      post urls_url, params: { url: { "full"=>"https://stackoverflow.com/questions/1128168/validation-for-url-domain-using-regex-rails" } }
     end
 
     assert_redirected_to url_url(Url.last)
@@ -33,10 +33,6 @@ class UrlsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update url" do
-    patch url_url(@url), params: { url: {  } }
-    assert_redirected_to url_url(@url)
-  end
 
   test "should destroy url" do
     assert_difference('Url.count', -1) do
@@ -45,4 +41,10 @@ class UrlsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to urls_url
   end
+
+  test "should must true response for a token" do
+    get "/#{@url.token}"
+    assert true
+  end
+
 end

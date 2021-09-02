@@ -4,8 +4,13 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  full: https://uach.mx/noticias/2021/9/1/la-uach-dio-total-cumplimiento-a-las-recomendaciones-hechas-por-la-defensoria-del-2019-al-2021/
+  token: 8ctnc3ny
+
 # column: value
 #
-two: {}
+two:
+  full: https://uach.mx/
+  token: 68jsg0f9
 # column: value
